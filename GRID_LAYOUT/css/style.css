@@ -1,0 +1,96 @@
+/* Estilos Generales */
+* {
+  margin: 10px;
+  padding: 10px;
+}
+
+.contenedor {
+  display: flex;
+  flex-flow: column; /*es lo mismo que flex-flow: column nowrap;*/
+}
+
+.header {
+  background-color: black;
+  display: flex;
+  flex-flow: column nowrap; /*flex-flow is nowrap default (no saltar de linia)*/
+}
+/* Hijos de Header */
+.menu {
+  background-color: #2d4059;
+  display: flex;
+  flex-flow: row; /*es lo mismo que flex-flow: row nowrap;*/
+  align-items: center;
+}
+.logo {
+  background-color: #ea5455;
+  flex: 1 1 auto;
+}
+.nav {
+  background-color: #ea5455;
+  flex: 5 1 auto;
+}
+.social {
+  background-color: #ea5455;
+  flex: 1 1 auto;
+}
+.banner {
+  background-color: DarkOrange;
+}
+h1 {
+  background-color: Gold;
+}
+.section {
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* Hijos de Section */
+.articulos {
+	/*El <'flex-grow'> indica cuantas unidades crecera si es un dos dividimos entre dos
+	El <'flex-shrink'> se controla como se enconjeran las columnas*/
+  background-color: #4e4e6a;
+  flex: 2 1 auto; /* flex: <'flex-grow'> <'flex-shrink'>? || <'flex-basis'>*/
+  display: flex;
+  flex-flow: row wrap; /* opcional, por defecto es row*/
+}
+.article {
+  background-color: #1f6cb0;
+  flex: 1 1 40%;
+}
+.navegacion {
+  background-color: #70a3c4;
+  flex: 1 1 100%;
+}
+.aside {
+	flex: 1 1 auto;
+	background-color: #f73f52;
+}
+.publicidad {
+  background-color: Gold;
+}
+.footer {
+  background-color: black;
+}
+.pie {
+  background-color: Khaki;
+}
+
+/* Media query 800px */
+
+@media all and (max-width: 800px) {
+  .section {
+    flex-direction: column;
+    align-items: stretch; /*por defecto rellena todo*/
+  }
+  .menu {
+    flex-direction: column;    
+    align-items: stretch;
+  }
+}
+
+/* Media query 600px */ 
+@media all and (max-width: 600px) {
+  .articulos {
+    flex-direction: column;
+  }
+}
